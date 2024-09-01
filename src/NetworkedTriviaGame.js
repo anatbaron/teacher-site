@@ -149,10 +149,10 @@ const NetworkedTriviaGame = () => {
   
     // Initialize Socket Connection
     useEffect(() => {
-      const newSocket = io('https://trivia-reactjs-server.vercel.app', {
-        transports: ['websocket', 'polling'],
-        reconnectionAttempts: 5, // Adjust as needed
-        debug: true // Enable for debugging
+      const newSocket = io('https://trivia-reactjs-server.glitch.me', {
+        headers:{
+          "user-agent": "chrome"
+        }
       });
       setSocket(newSocket);
   
